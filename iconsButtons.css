@@ -1,0 +1,47 @@
+.icon--arrow-medium svg {
+  overflow: visible;
+}
+.icon--arrow-medium circle,
+.icon--arrow-medium line,
+.icon--arrow-medium path {
+  stroke: var(--almostBlack);
+  stroke-width: 0.126rem;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.icon--arrow-medium:hover line,
+.icon--arrow-medium:hover path {
+  stroke: var(--almostWhite);
+}
+.icon--arrow-medium:hover circle {
+  fill: var(--almostBlack);
+}
+.some-icon rect,
+.some-icon:hover path {
+  fill: var(--darkGrey);
+}
+.btn path,
+.btn--invert:hover path,
+.some-icon path,
+.some-icon:hover rect {
+  fill: var(--almostWhite);
+}
+.btn--invert path,
+.btn:hover path,
+.icon-external-link path {
+  fill: var(--almostBlack);
+}
+.icon--plus {
+  box-shadow: inset 0 0 0 0.125rem var(--almostBlack);
+}
+.icon--plus:hover {
+  background-color: var(--almostBlack);
+}
+.icon--plus:hover > div {
+  background-color: var(--almostWhite);
+}
+.btn,
+[outline="black"] {
+  box-shadow: inset 0 0 0 0.125rem var(--almostBlack);
+}

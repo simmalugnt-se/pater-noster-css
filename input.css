@@ -1,0 +1,24 @@
+.input {
+  box-shadow: inset 0.125rem 0 0 0 var(--almostBlack);
+  border-radius: 0;
+}
+.input:active,
+.input:focus,
+.input:focus-visible,
+.input:pressed {
+  box-shadow: inset 0.125rem 0 0 0 var(--blue);
+}
+@media screen and (max-width: 479px) {
+  .input {
+    box-shadow: none;
+    border-left: solid 2px var(--darkGrey);
+  }
+  .input:active,
+  .input:focus,
+  .input:focus-visible,
+  .input:hover,
+  .input:pressed {
+    box-shadow: none;
+    border-left: solid 2px var(--blue);
+  }
+}

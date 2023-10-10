@@ -1,0 +1,84 @@
+.eapps-instagram-feed-posts-grid-load-more-container.eapps-instagram-feed-posts-grid-load-more-enabled,
+.instafeed-embed > div > a.eapps-link {
+  display: none !important;
+}
+.eapps-instagram-feed-posts-grid.eapps-instagram-feed-posts.es-layout.es-layout-grid {
+  overflow: hidden;
+}
+.eapps-instagram-feed-posts-inner.es-layout-grid-content {
+  display: grid;
+  overflow: hidden;
+  width: 100% !important;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  grid-template-columns: 3.6fr 8.5fr;
+  grid-template-rows: auto;
+  animation: instafeed-list 30s linear infinite;
+  overflow: visible;
+}
+.eapps-instagram-feed-posts-inner.es-layout-grid-content:hover {
+  animation-play-state: paused;
+}
+@keyframes instafeed-list {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-119%);
+  }
+}
+@media screen and (max-width: 767px) {
+  .eapps-instagram-feed-posts-inner.es-layout-grid-content {
+    grid-template-columns: 6fr 6fr;
+  }
+}
+@media screen and (max-width: 479px) {
+  .eapps-instagram-feed-posts-inner.es-layout-grid-content {
+    grid-template-columns: 1fr 3rem;
+  }
+}
+/* Oklart om denna ska vara här?? */
+.Block:local-styles {
+  grid-column-end: 14;
+  grid-column-start: 2;
+  grid-row-end: 3;
+  grid-row-start: 2;
+}
+.eapps-instagram-feed-posts-view {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+}
+.eapps-instagram-feed-posts-item-template-tile {
+  width: 100% !important;
+}
+.eapps-instagram-feed-posts-item-text.es-post-text {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+  line-height: 1.25em !important;
+  margin-top: 1em !important;
+}
+.eapps-instagram-feed-posts-item-comments-count-label,
+.eapps-instagram-feed-posts-item-likes-count-label {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  line-height: 1em !important;
+}
+.eapps-instagram-feed-posts-item-comments-count-icon,
+.eapps-instagram-feed-posts-item-likes-count-icon {
+  width: 1rem !important;
+  height: 1rem !important;
+  margin: 0 0.5rem !important;
+}
+.eapps-instagram-feed-posts-item-overlay {
+  -webkit-backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(0.5rem);
+}

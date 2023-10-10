@@ -1,0 +1,34 @@
+.events--txt-container {
+  box-shadow: inset 0.125rem 0 0 0 var(--almostBlack),
+    inset -0.125rem 0 0 0 var(--almostBlack);
+}
+.events--list {
+  --thisColumns: 3;
+  --thisColumnsWidth: minmax(
+    calc(
+      (100% - (var(--gridGap) * (var(--thisColumns) - 1))) / var(--thisColumns)
+    ),
+    1fr
+  );
+  grid-column-gap: var(--gridGap);
+  grid-auto-columns: var(--thisColumnsWidth);
+  grid-template-columns: var(--thisColumnsWidth);
+}
+.events--list:after {
+  content: "";
+}
+@media screen and (max-width: 991px) {
+  .events--list {
+    --thisColumns: 2.125;
+  }
+}
+@media screen and (max-width: 767px) {
+  .events--list {
+    --thisColumns: 1.125;
+  }
+}
+@media screen and (max-width: 479px) {
+  .events--list {
+    --thisColumns: 1.125;
+  }
+}

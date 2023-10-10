@@ -1,0 +1,32 @@
+.footer-newsletter-input {
+  border-radius: 0;
+  box-shadow: inset 0.125rem 0 0 0 var(--darkGrey);
+}
+.footer-newsletter-input:active,
+.footer-newsletter-input:focus,
+.footer-newsletter-input:focus-visible {
+  box-shadow: inset 0.125rem 0 0 0 var(--blue);
+}
+.footer-newsletter-container .btn {
+  box-shadow: inset 0 0 0 0.125rem var(--darkGrey);
+  background-color: transparent;
+  color: var(--darkGrey);
+}
+.footer-newsletter-container .btn:hover {
+  box-shadow: inset 0 0 0 0.125rem var(--darkGrey);
+  background-color: var(--darkGrey);
+  color: var(--almostWhite);
+}
+@media screen and (max-width: 479px) {
+  .footer-newsletter-input {
+    box-shadow: none;
+    border-left: solid 2px var(--darkGrey);
+  }
+  .footer-newsletter-input:active,
+  .footer-newsletter-input:focus,
+  .footer-newsletter-input:focus-visible,
+  .footer-newsletter-input:hover {
+    box-shadow: none;
+    border-left: solid 2px var(--blue);
+  }
+}

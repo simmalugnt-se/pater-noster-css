@@ -1,0 +1,82 @@
+@charset "UTF-8";
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+:root {
+  /* REM CALC */
+  --remMin: 16;
+  --remMax: 22;
+  --vpMin: 1440;
+  --vpMax: 2200;
+  --remCalc: clamp(
+    calc(1px * var(--remMin)),
+    calc(
+      (1px * var(--remMin)) + (var(--remMax) - var(--remMin)) *
+        ((100vw - (1px * var(--vpMin))) / (var(--vpMax) - var(--vpMin)))
+    ),
+    calc(1px * var(--remMax))
+  );
+
+  /* COLORS */
+  --almostBlack: #333333;
+  --almostWhite: #fcfcfc;
+  --paper: #f7f7f5;
+  --darkGrey: #445261;
+  --darkRed: #8d403f;
+  --red: #8d403f;
+  --blue: #b8cbd0;
+
+  /* GRID */
+  --gridCols: 12;
+  --gridGap: 1.25rem;
+  --gridSideMargins: 2.5rem;
+  --gridColsWidth: calc(
+    ((1px * var(--vpMax)) - (var(--gridGap) * 11)) / var(--gridCols)
+  );
+  --gridTemplateCols: minmax(
+      calc(var(--gridSideMargins) - var(--gridGap)),
+      auto
+    )
+    repeat(var(--gridCols), minmax(0px, var(--gridColsWidth)))
+    minmax(calc(var(--gridSideMargins) - var(--gridGap)), auto);
+}
+
+@media screen and (max-width: 991px) {
+  :root {
+    --gridSideMargins: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  :root {
+    --gridGap: 1rem;
+    --gridSideMargins: 1.25rem;
+  }
+}
+
+html {
+  font-size: var(--remCalc);
+}
+
+body[lang="en"] [lang]:not([lang="en"]),
+body[lang="fr"] [lang]:not([lang="fr"]),
+body[lang="sv"] [lang]:not([lang="sv"]) {
+  display: none;
+}
+body {
+  --bgWidth: calc(var(--gridSideMargins) * 0.7);
+  --bgOffset: calc((var(--gridSideMargins) - var(--bgWidth)) / 2);
+  background-image: url(https://uploads-ssl.webflow.com/61b1cd06b1ce5b227b4c8500/61e6af80c1d1d6971395f631_fjall-vRepeat-l.svg),
+    url(https://uploads-ssl.webflow.com/61b1cd06b1ce5b227b4c8500/61e6af802c0a82c4bf69297d_fjall-vRepeat-r.svg);
+  background-position: var(--bgOffset) 0, calc(100% - var(--bgOffset)) 0;
+  background-size: var(--bgWidth);
+  background-repeat: repeat-y;
+}
+@media screen and (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+}

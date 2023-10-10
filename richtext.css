@@ -1,0 +1,185 @@
+.richtext p {
+  font-size: 1.25rem;
+  line-height: 1.4em;
+  margin-bottom: 1.5rem;
+}
+.richtext:not(.cc-eventschedule) h1,
+.richtext:not(.cc-eventschedule) h2,
+.richtext:not(.cc-eventschedule) h3,
+.richtext:not(.cc-eventschedule) h4,
+.richtext:not(.cc-eventschedule) h5,
+.richtext:not(.cc-eventschedule) h6 {
+  color: var(--almostBlack);
+  margin-bottom: 0.5em;
+}
+.richtext figure {
+  margin-top: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
+  width: 100%;
+  display: block;
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  -webkit-margin-start: 0;
+  margin-inline-start: 0;
+  -webkit-margin-end: 0;
+  margin-inline-end: 0;
+}
+.richtext figure.w-richtext-align-center,
+.richtext figure.w-richtext-align-center div,
+.richtext figure.w-richtext-align-center img,
+.richtext figure.w-richtext-align-fullwidth div,
+.richtext figure.w-richtext-align-fullwidth img {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.richtext figure.w-richtext-align-floatleft,
+.richtext figure.w-richtext-align-normal {
+  max-width: calc(50% - 0.625rem);
+  margin-right: 0.625rem;
+}
+.richtext figure.w-richtext-align-floatright {
+  max-width: calc(50% - 0.625rem);
+  margin-left: 0.625rem;
+}
+.richtext figure.w-richtext-figure-type-video {
+  padding-bottom: 56.25% !important;
+}
+.richtext a {
+  color: var(--darkGrey);
+  text-decoration: underline;
+}
+.richtext a:hover {
+  color: var(--blue);
+  text-decoration: none;
+}
+.richtext:not(.cc-eventschedule) ol,
+.richtext:not(.cc-eventschedule) ul {
+  list-style: none;
+  margin-bottom: 2.5rem;
+  counter-reset: ol-counter;
+}
+.richtext:not(.cc-eventschedule) ol li {
+  background: 0 0;
+  counter-increment: ol-counter;
+  position: relative;
+}
+.richtext:not(.cc-eventschedule) ol li:before {
+  content: counter(ol-counter);
+  width: 1.334em;
+  height: 1.334em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  top: 0.1667em;
+  left: 0;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+}
+.richtext blockquote {
+  margin: 0 0 2.5rem 0;
+  padding: 0 2rem 0 3rem;
+  position: relative;
+  border: none;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  line-height: 1.4em;
+  color: var(--darkGrey);
+}
+.richtext blockquote:before {
+  content: '"';
+  position: absolute;
+  font-size: 3em;
+  line-height: 0.85em;
+  color: var(--blue);
+  top: 0;
+  left: 0;
+}
+.richtext figcaption {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--darkGrey);
+  margin: 0.5rem 0 0 0;
+}
+@media screen and (max-width: 991px) {
+  .richtext p {
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+}
+
+/* EVENT */
+
+.richtext.cc-eventschedule h1,
+.richtext.cc-eventschedule h2,
+.richtext.cc-eventschedule h3,
+.richtext.cc-eventschedule h4,
+.richtext.cc-eventschedule h5,
+.richtext.cc-eventschedule h6 {
+  color: var(--red);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.625rem;
+}
+.richtext.cc-eventschedule ol,
+.richtext.cc-eventschedule ul {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-gap: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  margin: 0 0 2.5rem 0;
+  padding: 0;
+}
+.richtext.cc-eventschedule li::marker {
+  list-style-type: none;
+}
+.richtext.cc-eventschedule li {
+  display: inline-flex;
+  margin: 0;
+  padding: 0.5rem 0;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  background: 0 0;
+  border-bottom: solid 1px rgba(51, 51, 51, 0.1);
+}
+.richtext.cc-eventschedule li strong {
+  display: inline-block;
+  align-self: center;
+  min-width: 5em;
+  padding-left: 1.8em;
+  margin-right: 0.8em;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  color: var(--red);
+  background: url(https://uploads-ssl.webflow.com/61b1cd06b1ce5b227b4c8500/620bd2bd9aba8e731316b13c_icon--time-fill.svg)
+    no-repeat left center;
+  background-size: 1em;
+}
+@media screen and (max-width: 991px) {
+  .richtext.cc-eventschedule h1,
+  .richtext.cc-eventschedule h2,
+  .richtext.cc-eventschedule h3,
+  .richtext.cc-eventschedule h4,
+  .richtext.cc-eventschedule h5,
+  .richtext.cc-eventschedule h6 {
+    color: var(--red);
+    font-size: 1rem;
+  }
+  .richtext.cc-eventschedule li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}

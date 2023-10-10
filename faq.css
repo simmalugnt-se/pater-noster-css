@@ -1,0 +1,12 @@
+.faq-item {
+  box-shadow: 0 0.0625rem 0 0 var(--almostBlack),
+    0 -0.0625rem 0 0 var(--almostBlack),
+    inset 0 0.0625rem 0 0 var(--almostBlack),
+    inset 0 -0.0625rem 0 0 var(--almostBlack);
+}
+.faq-question:hover .icon--plus {
+  background-color: var(--almostBlack);
+}
+.faq-question:hover .icon--plus > div {
+  background-color: var(--almostWhite);
+}

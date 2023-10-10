@@ -1,0 +1,36 @@
+html.w-editor .activeties-slider {
+  display: none;
+}
+.activeties-nav > div {
+  margin: 0 0.5rem 0 0 !important;
+}
+.activeties--arrow-left {
+  left: calc(((100% - 13.75rem) / 12 + 1.25rem) * 7);
+}
+.activeties--arrow-right {
+  left: calc(((100% - 13.75rem) / 12 + 1.25rem) * 7 + 3.25rem);
+}
+@media screen and (max-width: 991px) {
+  .activeties--arrow-left {
+    left: calc(((100% - 13.75rem) / 12 + 1.25rem) * 6 + 2.5rem);
+  }
+  .activeties--arrow-right {
+    left: calc(((100% - 13.75rem) / 12 + 1.25rem) * 6 + 2.5rem + 2.75rem);
+  }
+}
+@media screen and (max-width: 767px) {
+  .activeties--arrow-left {
+    left: 2.5rem;
+  }
+  .activeties--arrow-right {
+    left: 5.25rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .activeties--arrow-left {
+    left: 1.25rem;
+  }
+  .activeties--arrow-right {
+    left: 4rem;
+  }
+}
