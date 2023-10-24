@@ -274,9 +274,9 @@ body {
   box-shadow: inset 0 0 0 0.125rem var(--almostBlack);
 }
 .section {
-  width: 100%;
-  grid-column-gap: var(--gridGap);
-  grid-template-columns: var(--gridTemplateCols);
+  width: 100% !important;
+  grid-column-gap: var(--gridGap) !important;
+  grid-template-columns: var(--gridTemplateCols) !important;
 }
 .module-4 .btn {
   margin-top: 3rem;
